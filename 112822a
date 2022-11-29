@@ -1,0 +1,27 @@
+import sys
+from PyQt6.QtWidgets import *
+
+class mainwindow(QWidget):
+    def __init__(self, parent = None):
+        super(mainwindow, self).__init__(parent)
+        self.setGeometry(100,100,240,70)
+        self.setWindowTitle("RoA")
+
+        lbl = QLabel(self)
+        lbl.setGeomerty(10,10,400,40)
+        lbl.setText("Its better to burn out...Then Fade away!")
+
+        lbl2 = Qlabel(self)
+        lbl2.setGeometry(10,50,700,60)
+        lbl2.setText("Rock of Ages")
+
+        self.show()
+
+def main():
+    app = QApplication([])
+    w = mainwindow()
+    w.show()
+    sys.exit(app.exec())
+
+if __name__ == '__main__':
+    main()
